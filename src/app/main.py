@@ -27,7 +27,7 @@ class Imovel(BaseModel):
     banheirosQuartos: int
 
 
-@app.get("/imovel/previsao-preco/")
+@app.post("/imovel/previsao-preco/")
 def previsao_preco_imovel(imovel: Imovel):
 
     preco = predict_price(imovel)
